@@ -6,9 +6,6 @@
 		{
 			"name": "Minimal AMOLED",
 			"path": ".."
-		},
-		{
-			"path": "../../../LilyGo-AMOLED-Squareline-Example"
 		}
 	],
 	"settings": {}

@@ -4,10 +4,7 @@
 #include <LilyGo_AMOLED.h>
 #include <LV_Helper.h>
 #include <lvgl.h>
-#include <AceButton.h>
 
-
-using namespace ace_button;
 
 LilyGo_Class amoled;
 lv_obj_t *label1;
@@ -15,7 +12,6 @@ lv_obj_t *testButtonLabel;
 lv_obj_t *labelSlider;
 lv_obj_t *touchTest;
 uint8_t btnPin = 0;
-AceButton button(btnPin);
 uint8_t rotation = 1;
 const char *format_string = "#0000ff X:%d#\n #990000 Y:%d#\n #3d3d3d Size:%s# ";
 
@@ -43,16 +39,7 @@ static void slider_event_cb(lv_event_t *e)
     lv_obj_align_to(labelSlider, slider, LV_ALIGN_OUT_TOP_MID, 0, -15); /*Align top of the slider*/
 }
 
-void handleEvent(AceButton * /* button */, uint8_t eventType,
-                 uint8_t /* buttonState */,lv_obj_t *touchTest)
-{
-    switch (eventType) {
-    case AceButton::kEventPressed:
-        lv_label_set_text(touchTest,"Home Pressed");
-        break;
-    default: break;
-    }
-}
+
 
    
 void lv_example_get_started_1(void)
@@ -90,6 +77,7 @@ void lv_example_get_started_1(void)
     lv_obj_align(touchTest, LV_ALIGN_BOTTOM_MID, 0, -50);
     lv_obj_set_style_text_font(touchTest, &lv_font_montserrat_28, 0);
     lv_label_set_text(touchTest, "Touch Test");
+
     amoled.setHomeButtonCallback([](void *ptr) {
         Serial.println("Home key pressed!");
         static uint32_t checkMs = 0;
@@ -102,7 +90,7 @@ void lv_example_get_started_1(void)
             lv_timer_del(t);
         }, 2000, NULL);
     }, NULL);
-
+    
     label1 = lv_label_create(lv_scr_act());
     lv_label_set_long_mode(label1, LV_LABEL_LONG_WRAP);     /*Break the long lines*/
     lv_label_set_recolor(label1, true);                      /*Enable re-coloring by commands in the text*/
@@ -150,5 +138,5 @@ void loop()
         lv_label_set_text_fmt(label1, format_string, point.x, point.y,  amoled.getName());
     }
     lv_task_handler();
-    delay(5);
+    
 }
