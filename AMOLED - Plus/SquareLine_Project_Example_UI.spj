@@ -8134,7 +8134,7 @@
                       {
                         "nid": 2113452674,
                         "strtype": "ROLLER/Mode",
-                        "strval": "INFINITE",
+                        "strval": "NORMAL",
                         "InheritedType": 3
                       },
                       {
@@ -8411,7 +8411,7 @@
                       {
                         "nid": -1039094830,
                         "strtype": "ROLLER/Mode",
-                        "strval": "INFINITE",
+                        "strval": "NORMAL",
                         "InheritedType": 3
                       },
                       {
@@ -8688,7 +8688,7 @@
                       {
                         "nid": -2057096521,
                         "strtype": "ROLLER/Mode",
-                        "strval": "INFINITE",
+                        "strval": "NORMAL",
                         "InheritedType": 3
                       },
                       {
@@ -9217,7 +9217,7 @@
                       {
                         "nid": 143805885,
                         "strtype": "ROLLER/Mode",
-                        "strval": "INFINITE",
+                        "strval": "NORMAL",
                         "InheritedType": 3
                       },
                       {
@@ -9493,7 +9493,7 @@
                       {
                         "nid": -481743534,
                         "strtype": "ROLLER/Mode",
-                        "strval": "INFINITE",
+                        "strval": "NORMAL",
                         "InheritedType": 3
                       },
                       {
@@ -9835,7 +9835,7 @@
                       {
                         "nid": -1471649510,
                         "strtype": "ROLLER/Mode",
-                        "strval": "INFINITE",
+                        "strval": "NORMAL",
                         "InheritedType": 3
                       },
                       {
@@ -11800,7 +11800,7 @@
     "theme_color2": 0,
     "uiExportFolderPath": "C:\\Users\\Chris Chad\\Documents\\PlatformIO\\Projects\\Lilygo-T-Display-1.19-AMOLED-Minimal\\AMOLED - Plus\\src\\ui",
     "projectExportFolderPath": "C:\\Users\\Chris Chad\\Documents\\PlatformIO\\Projects\\Lilygo-T-Display-1.19-AMOLED-Minimal\\AMOLED - Plus\\src",
-    "backup_cnt": 487,
+    "backup_cnt": 488,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.11",
     "callfuncsexport": "CPP_FILE",

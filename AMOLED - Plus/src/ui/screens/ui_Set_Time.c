@@ -38,7 +38,7 @@ void ui_Set_Time_screen_init(void)
     lv_obj_set_style_text_font(ui_RTC_Label2, &lv_font_montserrat_48, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Set_Time_Roller_Hour = lv_roller_create(ui_Set_Time_Time);
-    lv_roller_set_options(ui_Set_Time_Roller_Hour, "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12", LV_ROLLER_MODE_INFINITE);
+    lv_roller_set_options(ui_Set_Time_Roller_Hour, "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12", LV_ROLLER_MODE_NORMAL);
     lv_roller_set_selected(ui_Set_Time_Roller_Hour, 5, LV_ANIM_OFF);
     lv_obj_set_width(ui_Set_Time_Roller_Hour, lv_pct(30));
     lv_obj_set_height(ui_Set_Time_Roller_Hour, lv_pct(75));
@@ -52,7 +52,7 @@ void ui_Set_Time_screen_init(void)
     ui_Set_Time_Roller_Minute = lv_roller_create(ui_Set_Time_Time);
     lv_roller_set_options(ui_Set_Time_Roller_Minute,
                           "00\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n",
-                          LV_ROLLER_MODE_INFINITE);
+                          LV_ROLLER_MODE_NORMAL);
     lv_roller_set_selected(ui_Set_Time_Roller_Minute, 30, LV_ANIM_OFF);
     lv_obj_set_width(ui_Set_Time_Roller_Minute, lv_pct(30));
     lv_obj_set_height(ui_Set_Time_Roller_Minute, lv_pct(75));
@@ -64,7 +64,7 @@ void ui_Set_Time_screen_init(void)
     lv_obj_set_style_text_font(ui_Set_Time_Roller_Minute, &lv_font_montserrat_40, LV_PART_SELECTED | LV_STATE_DEFAULT);
 
     ui_Set_Time_Roller_AMPM = lv_roller_create(ui_Set_Time_Time);
-    lv_roller_set_options(ui_Set_Time_Roller_AMPM, "AM\nPM", LV_ROLLER_MODE_INFINITE);
+    lv_roller_set_options(ui_Set_Time_Roller_AMPM, "AM\nPM", LV_ROLLER_MODE_NORMAL);
     lv_obj_set_width(ui_Set_Time_Roller_AMPM, lv_pct(30));
     lv_obj_set_height(ui_Set_Time_Roller_AMPM, lv_pct(40));
     lv_obj_set_x(ui_Set_Time_Roller_AMPM, 70);
@@ -79,7 +79,7 @@ void ui_Set_Time_screen_init(void)
     ui_Set_Time_Roller_Day = lv_roller_create(ui_Set_Time_Date);
     lv_roller_set_options(ui_Set_Time_Roller_Day,
                           "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31",
-                          LV_ROLLER_MODE_INFINITE);
+                          LV_ROLLER_MODE_NORMAL);
     lv_roller_set_selected(ui_Set_Time_Roller_Day, 11, LV_ANIM_OFF);
     lv_obj_set_width(ui_Set_Time_Roller_Day, lv_pct(30));
     lv_obj_set_height(ui_Set_Time_Roller_Day, lv_pct(75));
@@ -91,7 +91,7 @@ void ui_Set_Time_screen_init(void)
     lv_obj_set_style_text_font(ui_Set_Time_Roller_Day, &lv_font_montserrat_40, LV_PART_SELECTED | LV_STATE_DEFAULT);
 
     ui_Set_Time_Roller_Month = lv_roller_create(ui_Set_Time_Date);
-    lv_roller_set_options(ui_Set_Time_Roller_Month, "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12", LV_ROLLER_MODE_INFINITE);
+    lv_roller_set_options(ui_Set_Time_Roller_Month, "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12", LV_ROLLER_MODE_NORMAL);
     lv_roller_set_selected(ui_Set_Time_Roller_Month, 5, LV_ANIM_OFF);
     lv_obj_set_width(ui_Set_Time_Roller_Month, lv_pct(30));
     lv_obj_set_height(ui_Set_Time_Roller_Month, lv_pct(75));
@@ -104,7 +104,7 @@ void ui_Set_Time_screen_init(void)
 
     ui_Set_Time_Roller_Year = lv_roller_create(ui_Set_Time_Date);
     lv_roller_set_options(ui_Set_Time_Roller_Year, "25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40",
-                          LV_ROLLER_MODE_INFINITE);
+                          LV_ROLLER_MODE_NORMAL);
     lv_obj_set_width(ui_Set_Time_Roller_Year, lv_pct(30));
     lv_obj_set_height(ui_Set_Time_Roller_Year, lv_pct(75));
     lv_obj_set_x(ui_Set_Time_Roller_Year, 70);

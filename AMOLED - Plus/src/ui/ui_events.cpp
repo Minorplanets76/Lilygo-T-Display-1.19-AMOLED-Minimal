@@ -192,7 +192,7 @@ void update_day_roller(int month,int year)
         options += std::to_string(i) + "\n";
         }
 
-        lv_roller_set_options(ui_Set_Time_Roller_Day, options.c_str(),LV_ROLLER_MODE_INFINITE);
+        lv_roller_set_options(ui_Set_Time_Roller_Day, options.c_str(),LV_ROLLER_MODE_NORMAL);
 }
 
 void select_time_and_date_rollers(lv_event_t * e)
