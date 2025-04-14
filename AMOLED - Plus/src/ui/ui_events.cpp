@@ -221,3 +221,19 @@ void date_changed(lv_event_t * e)
         int year = lv_roller_get_selected(ui_Set_Time_Roller_Year) + 2025;
         update_day_roller(month, year);
 }
+
+void main_screen_button_long_pressed(lv_event_t * e)
+{
+	// Your code here
+        lv_label_set_text_fmt(ui_Main_Label2,"Sleep...");
+        lv_refr_now(lv_disp_get_default());
+        delay(1000);
+        esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_ON);
+        esp_sleep_enable_timer_wakeup(5000000);
+        esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_FAST_MEM, ESP_PD_OPTION_ON);
+        esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_SLOW_MEM, ESP_PD_OPTION_ON);
+        esp_sleep_pd_config(ESP_PD_DOMAIN_XTAL, ESP_PD_OPTION_ON);
+        esp_light_sleep_start();
+        lv_label_set_text_fmt(ui_Main_Label2,"Awake!");
+        lv_refr_now(lv_disp_get_default());
+}

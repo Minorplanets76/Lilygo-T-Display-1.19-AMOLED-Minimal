@@ -109,6 +109,9 @@ void ui_event_Main_Button1(lv_event_t * e)
     if(event_code == LV_EVENT_CLICKED) {
         btn_event_cb(e);
     }
+    if(event_code == LV_EVENT_LONG_PRESSED) {
+        main_screen_button_long_pressed(e);
+    }
 }
 void ui_event_Main_Slider1(lv_event_t * e)
 {

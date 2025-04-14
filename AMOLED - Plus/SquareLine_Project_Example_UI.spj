@@ -941,6 +941,71 @@
                   }
                 ],
                 "InheritedType": 4
+              },
+              {
+                "disabled": false,
+                "nid": 1351340783,
+                "strtype": "BUTTON/EventHandler",
+                "strval": "LONG_PRESSED",
+                "childs": [
+                  {
+                    "nid": -1628027679,
+                    "strtype": "_custom/name",
+                    "strval": "Event17",
+                    "InheritedType": 10
+                  },
+                  {
+                    "nid": -1980729169,
+                    "strtype": "_custom/condition_C",
+                    "strval": "",
+                    "InheritedType": 10
+                  },
+                  {
+                    "nid": -2121058142,
+                    "strtype": "_custom/condition_P",
+                    "strval": "",
+                    "InheritedType": 10
+                  },
+                  {
+                    "nid": -501256214,
+                    "strtype": "_custom/action",
+                    "strval": "CALL FUNCTION",
+                    "childs": [
+                      {
+                        "nid": -815582869,
+                        "strtype": "CALL FUNCTION/Name",
+                        "strval": "CALL FUNCTION",
+                        "InheritedType": 10
+                      },
+                      {
+                        "nid": -1127679586,
+                        "strtype": "CALL FUNCTION/Call",
+                        "strval": "<{Function_name}>( event_struct )",
+                        "InheritedType": 10
+                      },
+                      {
+                        "nid": 1866625548,
+                        "strtype": "CALL FUNCTION/CallC",
+                        "strval": "<{Function_name}>( e );",
+                        "InheritedType": 10
+                      },
+                      {
+                        "nid": -2032419025,
+                        "strtype": "CALL FUNCTION/Function_name",
+                        "strval": "main_screen_button_long_pressed",
+                        "InheritedType": 10
+                      },
+                      {
+                        "nid": 1144313771,
+                        "strtype": "CALL FUNCTION/Dont_export_function",
+                        "strval": "False",
+                        "InheritedType": 2
+                      }
+                    ],
+                    "InheritedType": 10
+                  }
+                ],
+                "InheritedType": 4
               }
             ],
             "saved_objtypeKey": "BUTTON"
@@ -11800,7 +11865,7 @@
     "theme_color2": 0,
     "uiExportFolderPath": "C:\\Users\\Chris Chad\\Documents\\PlatformIO\\Projects\\Lilygo-T-Display-1.19-AMOLED-Minimal\\AMOLED - Plus\\src\\ui",
     "projectExportFolderPath": "C:\\Users\\Chris Chad\\Documents\\PlatformIO\\Projects\\Lilygo-T-Display-1.19-AMOLED-Minimal\\AMOLED - Plus\\src",
-    "backup_cnt": 488,
+    "backup_cnt": 505,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.11",
     "callfuncsexport": "CPP_FILE",

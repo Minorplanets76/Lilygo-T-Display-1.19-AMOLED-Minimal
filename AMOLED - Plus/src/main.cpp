@@ -44,17 +44,33 @@ void lv_example_get_started_1(void)
     amoled.setHomeButtonCallback([](void *ptr) {
         Serial.println("Home key pressed!");
         static uint32_t checkMs = 0;
+        static uint8_t lastBri =0;
+
         if (millis() > checkMs) {
             _ui_screen_change(&ui_Main, LV_SCR_LOAD_ANIM_FADE_IN, 500, 0, &ui_Main_screen_init);
+
             lv_label_set_text(touchTest, "Home Pressed");
+            
+            
+            if (amoled.getBrightness()) {
+                lastBri = amoled.getBrightness();
+                amoled.setBrightness(0);  //turn screen "off"
+            } else {
+                amoled.setBrightness(lastBri);
+            }
         }
+        
         checkMs = millis() + 200;
+        
+
         lv_timer_create([](lv_timer_t *t) {
             lv_label_set_text(touchTest, "Touch Test");
             lv_timer_del(t);
         }, 2000, NULL);
     }, NULL);
     
+
+
     label1 = lv_label_create(lv_scr_act());
     lv_label_set_long_mode(label1, LV_LABEL_LONG_WRAP);     /*Break the long lines*/
     lv_label_set_recolor(label1, true);                      /*Enable re-coloring by commands in the text*/
@@ -111,7 +127,9 @@ void setup()
     
 
     lv_example_get_started_1();
+    
     lv_timer_t * timer = lv_timer_create(timer_cb,5000,NULL); 
+    
 }
 
 

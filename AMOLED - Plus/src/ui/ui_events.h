@@ -11,6 +11,7 @@ extern "C" {
 #endif
 
 void btn_event_cb(lv_event_t * e);
+void main_screen_button_long_pressed(lv_event_t * e);
 void setPPMlabel(lv_event_t * e);
 void sdcard_screen_loaded(lv_event_t * e);
 void update_time_and_date_to_screen(lv_event_t * e);
